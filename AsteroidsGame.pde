@@ -19,9 +19,9 @@ public void draw(){
 
 public void keyPressed(){
   if (key == 'w')
-    bob.accelerate(1);
+    bob.accelerate(0.1);
   if (key == 'r')
-    bob.accelerate(-1);
+    bob.accelerate(-0.1);
   if (key == 'd')
     bob.turn(3);
   if (key == 'a')
