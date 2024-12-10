@@ -14,6 +14,7 @@ public void setup(){
 
 public void draw(){
   background(0);
+  noFill();
   for(int i = 0; i<dots.length; i++){
     dots[i].show();
     bob.show();
