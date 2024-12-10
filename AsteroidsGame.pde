@@ -26,7 +26,7 @@ public void draw(){
       if(d<25)
         nums.remove(i);
   } 
-
+}
 public void keyPressed(){
   if (key == 'w')
     bob.accelerate(0.01);
