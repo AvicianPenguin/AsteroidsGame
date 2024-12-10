@@ -14,11 +14,11 @@ public void setup(){
 
 public void draw(){
   background(0);
-  noFill();
   for(int i = 0; i<dots.length; i++){
     dots[i].show();
     bob.show();
   }
+  noFill();
   for(int i =0; i<nums.size(); i++){
     nums.get(i).move();
     nums.get(i).show();
