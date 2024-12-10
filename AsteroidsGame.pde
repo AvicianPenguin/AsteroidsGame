@@ -1,3 +1,4 @@
+ArrayList <Asteroid> nums;
 Spaceship bob = new Spaceship();
 Star [] dots = new Star[250];
 public void setup(){
@@ -6,16 +7,25 @@ public void setup(){
   for(int i = 0; i<dots.length; i++){
     dots[i] = new Star();
   }
-}
+  nums = new ArrayList <Asteroid>();
+  for(int i = 0; i<11; i++)
+    nums.add(new Asteroid());
+  }
 
 public void draw(){
   background(0);
   for(int i = 0; i<dots.length; i++){
     dots[i].show();
     bob.show();
-    bob.move();
   }
-}
+  noFill();
+  for(int i =0; i<nums.size(); i++){
+    nums.get(i).move();
+    nums.get(i).show();
+    float d = dist((float)bob.GetSX(), (float)bob.GetSY(), (float)nums.get(i).GetAX(), (float)nums.get(i).GetAY());
+      if(d<25)
+        nums.remove(i);
+  } 
 
 public void keyPressed(){
   if (key == 'w')
