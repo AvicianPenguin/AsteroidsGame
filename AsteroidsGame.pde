@@ -33,9 +33,9 @@ public void keyPressed(){
   if (key == 'r')
     bob.accelerate(-0.01);
   if (key == 'd')
-    bob.turn(3);
+    bob.turn(10);
   if (key == 'a')
-    bob.turn(-3);
+    bob.turn(-10);
   if (key =='h')
     bob.hyperspace();
 }
