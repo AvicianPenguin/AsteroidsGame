@@ -18,7 +18,6 @@ public void draw(){
     dots[i].show();
     bob.show();
   }
-  noFill();
   for(int i =0; i<nums.size(); i++){
     nums.get(i).move();
     nums.get(i).show();
