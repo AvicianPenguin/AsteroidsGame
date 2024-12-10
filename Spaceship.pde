@@ -23,5 +23,4 @@ class Spaceship extends Floater{
   public double GetSY(){
     return myCenterY;
   }
-
 }
