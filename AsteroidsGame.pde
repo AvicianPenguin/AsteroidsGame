@@ -1,4 +1,5 @@
 ArrayList <Asteroid> nums;
+ArrayList <Bullet> shots = new ArrayList <Bullet>();
 Spaceship bob = new Spaceship();
 Star [] dots = new Star[250];
 public void setup(){
@@ -27,7 +28,27 @@ public void draw(){
       if(d<25)
         nums.remove(i);
   } 
-}
+  for(int a = 0; a<shots.size(); a++){
+    shots.get(a).move();
+    shots.get(a).show();
+    if(shots.get(a).GetBX() > 500){
+      shots.remove(a);
+      a--;
+    }
+    if(shots.get(a).GetBX() < 500){
+      shots.remove(a);
+      a--;
+    }
+    if(shots.get(a).GetBY() > 500){
+      shots.remove(a);
+      a--;
+    }
+    if(shots.get(a).GetBY() < 500){
+      shots.remove(a);
+      a--;
+    }
+  }
+
 public void keyPressed(){
   if (key == 'w')
     bob.accelerate(0.005);
@@ -39,4 +60,6 @@ public void keyPressed(){
     bob.turn(-10);
   if (key =='h')
     bob.hyperspace();
+  if (key == ' ')
+    shots.add(new Bullet (bob));
 }
