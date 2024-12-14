@@ -31,22 +31,6 @@ public void draw(){
   for(int a = 0; a<shots.size(); a++){
     shots.get(a).move();
     shots.get(a).show();
-    if(shots.get(a).GetBX() > 500){
-      shots.remove(a);
-      a--;
-    }
-    if(shots.get(a).GetBX() < 500){
-      shots.remove(a);
-      a--;
-    }
-    if(shots.get(a).GetBY() > 500){
-      shots.remove(a);
-      a--;
-    }
-    if(shots.get(a).GetBY() < 500){
-      shots.remove(a);
-      a--;
-    }
   }
 
 public void keyPressed(){
